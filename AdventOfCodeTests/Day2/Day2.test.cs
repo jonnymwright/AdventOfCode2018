@@ -46,5 +46,20 @@ namespace jonny.AoCTests.Day2
             //Then
             Assert.Equal("fgij", result);
         }
+
+        [Fact]
+        public void CanFindMatchingWithoutAnyOthers()
+        {
+            //Given
+            var ids = new[] {"srijafjzloguvlnctqmphenbkd",
+                "srijafjzloguvlnvtqmphenbkd"};
+            var systemUnderTest = new IdScanner(ids);
+
+            //When
+            string result = systemUnderTest.FindCommonId();
+
+            //Then
+            Assert.Equal("srijafjzloguvlntqmphenbkd", result);
+        }
     }
 }

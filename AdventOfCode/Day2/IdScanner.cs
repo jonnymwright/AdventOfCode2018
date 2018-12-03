@@ -1,22 +1,32 @@
 using System.Linq;
-namespace jonny.AoC.Day2 {
-    public class IdScanner {
-
+namespace jonny.AoC.Day2
+{
+    public class IdScanner
+    {
         private readonly string[] ids;
-        public IdScanner(string[] ids) {
+        public IPairingStrategy<string> PairGenerator { get; set; }
+
+        public IdScanner(string[] ids)
+        {
             this.ids = ids;
+            PairGenerator = new CheckSumPairingStrategy();
+            //PairGenerator = new NiavePairingStrategy<string>();
         }
 
-        public int GetCheckSum() {
+        public int GetCheckSum()
+        {
             int doubles = 0, triples = 0;
 
-            foreach(string id in ids) {
+            foreach (string id in ids)
+            {
                 var counts = id.GroupBy(character => character)
                     .Select(group => group.Count());
-                if (counts.Contains(2)) {
+                if (counts.Contains(2))
+                {
                     doubles++;
                 }
-                if (counts.Contains(3)) {
+                if (counts.Contains(3))
+                {
                     triples++;
                 }
             }
@@ -24,20 +34,21 @@ namespace jonny.AoC.Day2 {
             return doubles * triples;
         }
 
-        public string FindCommonId() {
+        public string FindCommonId()
+        {
             int length = ids[0].Length;
-            for (int i = 0; i < ids.Length; i++)
+            var pairs = PairGenerator.GetPairs(ids);
+            System.Console.WriteLine(pairs.Count());
+            foreach (var pair in pairs)
             {
-                for (int j = 0; j < i; j++)
-                {
-                    string candidate1 = ids[i];
-                    string candidate2 = ids[j];
+                string candidate1 = pair.Item1;
+                string candidate2 = pair.Item2;
 
-                    var matches = candidate1.Zip(candidate2, (a, b) => new {char1 = a, char2 = b})
-                        .Where(pair => pair.char1 == pair.char2);
-                    if (matches.Count() == length - 1) {
-                        return string.Concat(matches.Select(pair => pair.char1));
-                    }
+                var matches = candidate1.Zip(candidate2, (a, b) => new { char1 = a, char2 = b })
+                    .Where(characterPair => characterPair.char1 == characterPair.char2);
+                if (matches.Count() == length - 1)
+                {
+                    return string.Concat(matches.Select(characterPair => characterPair.char1));
                 }
             }
             return "";

@@ -10,5 +10,8 @@
     <Content Include="Day2\IdScanner.cs" />
     <Content Include="Day3\ClaimResolver.cs" />
     <Content Include="Day3\Claim.cs" />
+    <Content Include="Day2\IPairingStrategy.cs" />
+    <Content Include="Day2\NiavePairingStrategy.cs" />
+    <Content Include="Day2\CheckSumPairingStrategy.cs" />
   </ItemGroup>
 </Project>
