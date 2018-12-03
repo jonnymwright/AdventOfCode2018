@@ -1,5 +1,5 @@
 ﻿using System;
-using jonny.AoC.Day1;
+using jonny.AoC.Day2;
 
 namespace HelloWorld
 {
@@ -7,7 +7,8 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new Day1("Day1/Input.txt").FirstRepeatingFrequency());
+            var lines = System.IO.File.ReadAllLines("Day2/input.txt");
+            Console.WriteLine(new IdScanner(lines).FindCommonId());
         }
     }
 }

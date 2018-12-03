@@ -12,5 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode\AdventOfCode.csproj" />
+    <Content Include="Day2\Day2.test.cs" />
   </ItemGroup>
 </Project>

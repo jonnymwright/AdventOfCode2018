@@ -7,5 +7,6 @@
   <ItemGroup>
     <Content Include="Program.cs" />
     <Content Include="Day1\Day1.cs" />
+    <Content Include="Day2\IdScanner.cs" />
   </ItemGroup>
 </Project>
