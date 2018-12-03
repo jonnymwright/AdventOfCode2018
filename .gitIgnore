@@ -1,0 +1,5 @@
+.vscode
+AdventOfCode/obj
+AdventOfCode/bin
+AdventOfCodeTests/obj
+AdventOfCodeTests/bin
