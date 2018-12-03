@@ -1,5 +1,5 @@
 ﻿using System;
-using jonny.AoC.Day2;
+using jonny.AoC.Day3;
 
 namespace HelloWorld
 {
@@ -7,8 +7,10 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            var lines = System.IO.File.ReadAllLines("Day2/input.txt");
-            Console.WriteLine(new IdScanner(lines).FindCommonId());
+            var lines = System.IO.File.ReadAllLines("Day3/input.txt");
+            var claimResolver = new ClaimResolver(lines);
+            claimResolver.PlaceClaims();
+            Console.WriteLine(string.Join(' ', claimResolver.NonOverlappingClaims));
         }
     }
 }
