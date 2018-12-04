@@ -2,7 +2,7 @@ using jonny.AoC.Day3;
 using System.Linq;
 using Xunit;
 
-namespace jonny.AoCTests.Day3
+namespace jonny.AoCTests.Day3z
 {
     public class Day3Tests
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-using jonny.AoC.Day2;
+using jonny.AoC.Day4;
 
 namespace HelloWorld
 {
@@ -7,11 +7,9 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            var lines = System.IO.File.ReadAllLines("Day2/input.txt");
-            IdScanner scanner = new IdScanner(lines);
-            Console.WriteLine(string.Join(' ', scanner.FindCommonId()));
-            //scanner.PairGenerator = new NiavePairingStrategy<string>();
-            //Console.WriteLine(string.Join(' ', scanner.FindCommonId()));
+            var lines = System.IO.File.ReadAllText("Day4/input.txt");
+            WatchWatcher watchWatcher = new WatchWatcher(lines);
+            Console.WriteLine(watchWatcher.SleepiestMinute());
         }
     }
 }

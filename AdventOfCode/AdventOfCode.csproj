@@ -13,5 +13,7 @@
     <Content Include="Day2\IPairingStrategy.cs" />
     <Content Include="Day2\NiavePairingStrategy.cs" />
     <Content Include="Day2\CheckSumPairingStrategy.cs" />
+    <Content Include="Day4\WatchWatcher.cs" />
+    <Content Include="Day4\LogEntry.cs" />
   </ItemGroup>
 </Project>
