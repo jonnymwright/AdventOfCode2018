@@ -1,5 +1,6 @@
 ﻿using System;
-using jonny.AoC.Day4;
+using System.Linq;
+using jonny.AoC.Day5;
 
 namespace HelloWorld
 {
@@ -7,9 +8,9 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            var lines = System.IO.File.ReadAllText("Day4/input.txt");
-            WatchWatcher watchWatcher = new WatchWatcher(lines);
-            Console.WriteLine(watchWatcher.SleepiestMinute());
+            var lines = System.IO.File.ReadAllText("Day5/input.txt");
+            PolymerReducer watchWatcher = new PolymerReducer(lines);
+            Console.WriteLine(watchWatcher.RemoveAndShorten().Count());
         }
     }
 }
