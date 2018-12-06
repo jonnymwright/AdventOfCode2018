@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using jonny.AoC.Day5;
+using jonny.AoC.Day6;
 
 namespace HelloWorld
 {
@@ -8,9 +8,10 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            var lines = System.IO.File.ReadAllText("Day5/input.txt");
-            PolymerReducer watchWatcher = new PolymerReducer(lines);
-            Console.WriteLine(watchWatcher.RemoveAndShorten().Count());
+            var lines = System.IO.File.ReadAllText("Day6/input.txt");
+            CoordinateSpaceFinder finder = new CoordinateSpaceFinder(lines);
+            Console.WriteLine(finder.LargestDangerousArea());
+            Console.WriteLine(finder.LargestSafeArea(10000));
         }
     }
 }

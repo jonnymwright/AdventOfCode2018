@@ -16,5 +16,8 @@
     <Content Include="Day4\WatchWatcher.cs" />
     <Content Include="Day4\LogEntry.cs" />
     <Content Include="Day5\PolymerReducer.cs" />
+    <Content Include="Day6\Day6.cs" />
+    <Content Include="Day6\CoordinateSpaceFinder.cs" />
+    <Content Include="Day6\Coordinate.cs" />
   </ItemGroup>
 </Project>
