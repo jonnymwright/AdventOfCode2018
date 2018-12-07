@@ -19,5 +19,7 @@
     <Content Include="Day6\Day6.cs" />
     <Content Include="Day6\CoordinateSpaceFinder.cs" />
     <Content Include="Day6\Coordinate.cs" />
+    <Content Include="Day7\StepOrderer.cs" />
+    <Content Include="Day7\Step.cs" />
   </ItemGroup>
 </Project>
