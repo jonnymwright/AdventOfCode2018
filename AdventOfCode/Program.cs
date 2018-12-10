@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using jonny.AoC.Day7;
+using jonny.AoC.Day10;
 
 namespace HelloWorld
 {
@@ -8,9 +8,9 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            var lines = System.IO.File.ReadAllText("Day7/input.txt");
-            StepOrderer orderer = new StepOrderer(lines);
-            Console.WriteLine(orderer.GetTimings(60,5));
+            var lines = System.IO.File.ReadAllText("Day10/input.txt");
+            StarAligner aligner = new StarAligner(lines);
+            Console.WriteLine(aligner.MostAlignedSecond());
         }
     }
 }

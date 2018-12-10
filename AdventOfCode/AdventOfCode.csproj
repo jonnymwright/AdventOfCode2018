@@ -21,5 +21,7 @@
     <Content Include="Day6\Coordinate.cs" />
     <Content Include="Day7\StepOrderer.cs" />
     <Content Include="Day7\Step.cs" />
+    <Content Include="Day10\StarAligner.cs" />
+    <Content Include="Day10\LightPoint.cs" />
   </ItemGroup>
 </Project>
