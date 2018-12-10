@@ -19,11 +19,6 @@ namespace jonny.AoC.Day7
         {
             var byDependecy = GetDependencyGraph();
 
-            foreach (var step in steps)
-            {
-                byDependecy[step.After].Add(step.Before);
-            }
-
             var builder = new System.Text.StringBuilder();
             while (byDependecy.Any())
             {
