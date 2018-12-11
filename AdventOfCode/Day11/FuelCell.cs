@@ -8,8 +8,6 @@ namespace jonny.AoC.Day11 {
 
         public int PowerLevel {get;}
 
-        private int velX;
-        private int velY;
         public FuelCell(int x, int y, int serial) {
             this.X = x;
             this.Y = y;

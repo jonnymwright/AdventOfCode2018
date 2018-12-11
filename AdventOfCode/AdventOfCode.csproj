@@ -26,5 +26,7 @@
     <Content Include="Day11\FuelCell.cs" />
     <Content Include="Day11\PowerGrid.cs" />
     <Content Include="Day8\Node.cs" />
+    <Content Include="Day9\MarblesGames.cs" />
+    <Content Include="Day9\Marble.cs" />
   </ItemGroup>
 </Project>
