@@ -23,5 +23,7 @@
     <Content Include="Day7\Step.cs" />
     <Content Include="Day10\StarAligner.cs" />
     <Content Include="Day10\LightPoint.cs" />
+    <Content Include="Day11\FuelCell.cs" />
+    <Content Include="Day11\PowerGrid.cs" />
   </ItemGroup>
 </Project>

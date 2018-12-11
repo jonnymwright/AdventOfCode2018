@@ -17,9 +17,21 @@ namespace jonny.AoC.Day10 {
             velY = int.Parse(match.Groups[4].Value);
         }
 
+        public LightPoint(LightPoint other) {
+            this.Y = other.Y;
+            this.X = other.X;
+            this.velX = other.velX;
+            this.velY = other.velY;
+        }
+
         internal void Tick() {
             X += velX;
             Y += velY;
+        }
+
+        internal void UnTick() {
+            X -= velX;
+            Y -= velY;
         }
     }
 }
