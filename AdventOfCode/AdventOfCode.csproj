@@ -28,5 +28,6 @@
     <Content Include="Day8\Node.cs" />
     <Content Include="Day9\MarblesGames.cs" />
     <Content Include="Day9\Marble.cs" />
+    <Content Include="Day12\PlantBreeder.cs" />
   </ItemGroup>
 </Project>

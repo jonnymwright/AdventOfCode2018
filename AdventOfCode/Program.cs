@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using jonny.AoC.Day9;
+using jonny.AoC.Day12;
 
 namespace HelloWorld
 {
@@ -8,9 +8,11 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            //var lines = System.IO.File.ReadAllText("Day8/input.txt");
-            MarblesGame game = new MarblesGame(418);
-            Console.WriteLine(game.Play(7076900).Max());
+            var lines = System.IO.File.ReadAllText("Day12/input.txt");
+            var breeder = new PlantBreeder(lines);
+            Console.WriteLine(breeder.ValueAfter(20));
+            breeder = new PlantBreeder(lines);
+            Console.WriteLine(breeder.ValueAfter(50000000000));
         }
     }
 }

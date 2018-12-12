@@ -22,5 +22,6 @@
     <Content Include="Day11\Day11.test.cs" />
     <Content Include="Day8\Day8.test.cs" />
     <Content Include="Day9\Day9.test.cs" />
+    <Content Include="Day12\Day12.test.cs" />
   </ItemGroup>
 </Project>
