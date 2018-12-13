@@ -29,5 +29,8 @@
     <Content Include="Day9\MarblesGames.cs" />
     <Content Include="Day9\Marble.cs" />
     <Content Include="Day12\PlantBreeder.cs" />
+    <Content Include="Day13\TrackTracker.cs" />
+    <Content Include="Day13\TrackPiece.cs" />
+    <Content Include="Day13\Cart.cs" />
   </ItemGroup>
 </Project>

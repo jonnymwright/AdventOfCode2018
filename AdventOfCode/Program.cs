@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using jonny.AoC.Day12;
+using jonny.AoC.Day13;
 
 namespace HelloWorld
 {
@@ -8,11 +8,10 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            var lines = System.IO.File.ReadAllText("Day12/input.txt");
-            var breeder = new PlantBreeder(lines);
-            Console.WriteLine(breeder.ValueAfter(20));
-            breeder = new PlantBreeder(lines);
-            Console.WriteLine(breeder.ValueAfter(50000000000));
+            var lines = System.IO.File.ReadAllLines("Day13/input.txt");
+            var tracker = new TrackTracker(lines);
+            var survivor = tracker.RunUntilOneLeft();
+            Console.WriteLine($"{survivor.Item1}, {survivor.Item2}");
         }
     }
 }
