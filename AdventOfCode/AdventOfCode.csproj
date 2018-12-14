@@ -32,5 +32,6 @@
     <Content Include="Day13\TrackTracker.cs" />
     <Content Include="Day13\TrackPiece.cs" />
     <Content Include="Day13\Cart.cs" />
+    <Content Include="Day14\RecipeBoard.cs" />
   </ItemGroup>
 </Project>
