@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using jonny.AoC.Day14;
+using jonny.AoC.Day17;
 
 namespace HelloWorld
 {
@@ -8,10 +8,12 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            var lines = System.IO.File.ReadAllLines("Day13/input.txt");
-            var board = new RecipeBoard(new[] {3, 7});
-            Console.WriteLine(board.Score(640441));
-            Console.WriteLine(board.BeforeScore("640441"));
+            var lines = System.IO.File.ReadAllLines("Day17/input.txt");
+            
+            var settler = new WaterSettler(lines);
+            System.IO.File.WriteAllText("day17/empty.txt", settler.ToString());
+            Console.WriteLine(settler.RunUntilFull());
+            System.IO.File.WriteAllText("day17/full.txt", settler.ToString());
             
         }
     }
