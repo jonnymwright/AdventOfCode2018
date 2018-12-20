@@ -115,6 +115,24 @@ namespace jonny.AoC.Day20 {
             return distances.Count();
         }
 
+        public int[,] ToDistanceArray() {
+            int yMin = map.Keys.Min();
+            int yMax = map.Keys.Max();
+            int xMin = map.SelectMany(kvp => kvp.Value.Keys).Min();
+            int xMax = map.SelectMany(kvp => kvp.Value.Keys).Max();
+            var result = new int [yMax-yMin,xMax-xMin];
+
+            for (int y = 0; y < yMax-yMin; y++)
+            {
+                for (int x = 0; x < xMax-xMin; x++)
+                {
+                    result[y,x] = map[y+yMin][x+xMin].Distance;
+                }
+            }
+
+            return result;
+        }
+
         private void Branch(string path) {
             int depth = 1;
             List<State> clones = new List<State>{current};

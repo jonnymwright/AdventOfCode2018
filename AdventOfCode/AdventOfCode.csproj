@@ -38,5 +38,9 @@
     <Content Include="Day18\LumberConsturctor.cs" />
     <Content Include="Day20\DoorWalker.cs" />
     <Content Include="Day20\Room.cs" />
+    <Content Include="Day20\MapOutput.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.5.0-preview1-25718-03" />
   </ItemGroup>
 </Project>

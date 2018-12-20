@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using jonny.AoC.Day18;
+using jonny.AoC.Day20;
 
 namespace HelloWorld
 {
@@ -8,11 +8,13 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            var lines = System.IO.File.ReadAllLines("Day18/input.txt");
+            var lines = System.IO.File.ReadAllLines("Day20/input.txt");
             
-            var lumberer = new LumberConstuctor(lines);
-            Console.WriteLine(lumberer.Run(1000000000));
-            
+            DoorWalker walker = new DoorWalker();
+            walker.Walk(lines[0]);
+            new MapOutput().ToBitMap(
+                walker.ToDistanceArray()
+            );
         }
     }
 }
