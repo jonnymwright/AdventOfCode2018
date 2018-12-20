@@ -36,5 +36,7 @@
     <Content Include="Day17\WaterSettler.cs" />
     <Content Include="Day17\MapTile.cs" />
     <Content Include="Day18\LumberConsturctor.cs" />
+    <Content Include="Day20\DoorWalker.cs" />
+    <Content Include="Day20\Room.cs" />
   </ItemGroup>
 </Project>
