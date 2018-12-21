@@ -40,5 +40,11 @@
     <Content Include="Day16\Registers.cs" />
     <Content Include="Day16\InstructionMatcher.cs" />
     <Content Include="Day16\InstructionRunner.cs" />
+    <Content Include="Day20\DoorWalker.cs" />
+    <Content Include="Day20\Room.cs" />
+    <Content Include="Day20\MapOutput.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.5.0-preview1-25718-03" />
   </ItemGroup>
 </Project>
