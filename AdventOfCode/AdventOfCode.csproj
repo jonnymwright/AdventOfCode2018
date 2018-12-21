@@ -46,5 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Drawing.Common" Version="4.5.0-preview1-25718-03" />
+    <Content Include="Day19\JumpingInstructionRunner.cs" />
+    <Content Include="Day19\DecompiledRunner.cs" />
   </ItemGroup>
 </Project>
