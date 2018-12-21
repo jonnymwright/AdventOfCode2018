@@ -4,21 +4,7 @@ using System.Linq;
 namespace jonny.AoC.Day16 {
     public abstract class Instruction
     {
-        protected virtual bool source1IsLiteral => false;
-        protected virtual bool source2IsLiteral => true;
-
-        protected abstract Func<int, int, int> op {get;}
-
-        public int[] Execute(int source1, int source2, int target, int[] registers) {
-            registers = registers.ToArray();
-            int arg1 = source1IsLiteral ? source1 : registers[source1];
-            int arg2 = source2IsLiteral ? source2 : registers[source2];
-            registers[target] = op(arg1, arg2);
-            return registers;
-        }
-
-        public static Instruction[] GetAllInstruction() {
-            return new Instruction[] {
+        private static Instruction[] all = new Instruction[] {
                 new Addr(),
                 new Addi(),
                 new Mulr(),
@@ -36,6 +22,22 @@ namespace jonny.AoC.Day16 {
                 new Eqri(),
                 new Eqrr(),
             };
+
+        protected virtual bool source1IsLiteral => false;
+        protected virtual bool source2IsLiteral => true;
+
+        protected abstract Func<int, int, int> op {get;}
+
+        public int[] Execute(int source1, int source2, int target, int[] registers) {
+            registers = registers.ToArray();
+            int arg1 = source1IsLiteral ? source1 : registers[source1];
+            int arg2 = source2IsLiteral ? source2 : registers[source2];
+            registers[target] = op(arg1, arg2);
+            return registers;
+        }
+
+        public static Instruction[] GetAllInstruction() {
+            return all;
         }
     }
 
@@ -72,10 +74,11 @@ namespace jonny.AoC.Day16 {
     }
 
     public class Setr : Seti {
-        protected override bool source1IsLiteral => true;
+        protected override bool source1IsLiteral => false;
     }
 
     public class Seti : Instruction {
+        protected override bool source1IsLiteral => true;
         protected override Func<int, int, int> op { get { return (a,b) => a;}}
     }
 
@@ -101,7 +104,7 @@ namespace jonny.AoC.Day16 {
         protected override Func<int, int, int> op { get { return (a,b) => a==b ? 1 : 0;}}
     }
 
-    public class Eqrr : Gtri {
+    public class Eqrr : Eqri {
         protected override bool source2IsLiteral => false;
     }
 }
